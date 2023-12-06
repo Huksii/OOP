@@ -89,40 +89,4 @@
 # h1.low_price(6)
 # h1.get_info()
 
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
 
-    def get_info(self):
-        print(f'Имя студента: {self.name}')
-        print(f'Возраст: {self.age}')
-
-class Group:
-    def __init__(self, name_group):
-        self.name_group = name_group
-        self.students = []
-    
-    def add_students_names(self, name):
-        self.students.append(name)
-
-
-    def get_students_names(self, obj):
-        self.students.append(obj.name)
-        print(f"Студент добавлен {obj.name}")
-        
-
-st1 = Person('Ерасыл', 21)
-st2 = Person('Самат', 23)
-st3 = Person('Камила', 25)
-
-grp1 = Group('Первая группа')
-
-all_students = [st1, st2, st3]
-for i in all_students:
-    # grp1.add_students_names(i.name)
-    grp1.get_students_names(i)
-# grp1.get_students_names(st1)
-# grp1.get_students_names(st2)
-# grp1.get_students_names(st3)
-print(grp1.students)
